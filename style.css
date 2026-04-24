@@ -715,7 +715,7 @@ body {
 }
 
 .step-d {
-  font-size: 12px;
+  font-size: 14px;
   color: #3a6070;
   line-height: 1.7;
 }
@@ -1022,7 +1022,7 @@ body {
 
 .footer-tag {
   font-size: 11px;
-  color: #2a5060;
+  color: #4AABCE;
   margin-top: 6px;
   line-height: 1.8;
 }
@@ -1036,14 +1036,14 @@ body {
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2a5060;
+  color: #4AABCE;
   margin-bottom: 14px;
 }
 
 .fcol a,
 .fcol p {
   font-size: 12px;
-  color: #2a5060;
+  color: #4AABCE;
   display: block;
   margin-bottom: 6px;
   text-decoration: none;
@@ -1051,7 +1051,7 @@ body {
 }
 
 .fcol a:hover {
-  color: #4AABCE;
+  color: #2a5060;
 }
 
 .foot-bot {
@@ -1064,7 +1064,7 @@ body {
 
 .foot-copy {
   font-size: 10px;
-  color: #1a3040;
+  color: #4AABCE;
   letter-spacing: 1px;
 }
 
