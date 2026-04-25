@@ -31,14 +31,21 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { passive: true });
 
   /* ------------------------------------------
-     2. MOBILE NAV TOGGLE
-  ------------------------------------------ */
+   2. MOBILE NAV TOGGLE
+------------------------------------------ */
   var navToggle = document.getElementById('navToggle');
   var navMenu = document.getElementById('navMenu');
 
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', function () {
       navMenu.classList.toggle('open');
+    });
+
+  // Close menu when a link is clicked
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navMenu.classList.remove('open');
+      });
     });
   }
 

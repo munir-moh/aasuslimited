@@ -1077,6 +1077,23 @@ body {
     flex-wrap: wrap;
     height: auto;
     min-height: 56px;
+    position: relative;
+  }
+
+  .nav-logo {
+    flex: 1;
+    padding: 10px 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .nav-cta {
+    display: none;
   }
 
   .nav-links {
@@ -1084,24 +1101,23 @@ body {
     flex-direction: column;
     width: 100%;
     gap: 0;
-    padding: 12px 0;
+    background: #0e2233;
+    border-top: 1px solid rgba(74,171,206,0.2);
   }
 
   .nav-links.open {
     display: flex;
   }
 
+  .nav-links li {
+    width: 100%;
+  }
+
   .nav-links a {
-    padding: 10px 0;
+    display: block;
+    padding: 14px 20px;
     border-bottom: 0.5px solid rgba(74,171,206,0.1);
-  }
-
-  .nav-cta {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: flex;
+    width: 100%;
   }
 
   .hero {
@@ -1138,6 +1154,7 @@ body {
 
   .port-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 
   .port-main {
