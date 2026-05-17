@@ -1,14 +1,5 @@
-/* ============================================
-   AA SUSCONS LIMITED — main.js
-   Animations: scroll reveal, counter, nav shrink,
-                image hover zoom, page fade-in
-   ============================================ */
-
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ------------------------------------------
-     1. NAVBAR — shrink on scroll + active link
-  ------------------------------------------ */
   var nav = document.getElementById('mainNav');
   var navLinks = document.querySelectorAll('.nav-links a');
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -29,9 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     triggerCounters();
   }, { passive: true });
 
-  /* ------------------------------------------
-   2. MOBILE NAV TOGGLE
------------------------------------------- */
   var navToggle = document.getElementById('navToggle');
   var navMenu = document.getElementById('navMenu');
 
@@ -40,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
       navMenu.classList.toggle('open');
     });
 
-  // Close menu when a link is clicked
     navMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navMenu.classList.remove('open');
@@ -48,11 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ------------------------------------------
-     3. NUMBER COUNTER ANIMATION
-     Finds elements with data-target attribute
-     and counts up to that number on scroll
-  ------------------------------------------ */
   var countersRun = false;
 
   function animateCount(el) {
@@ -64,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function step(timestamp) {
       if (!startTime) startTime = timestamp;
       var progress = Math.min((timestamp - startTime) / duration, 1);
-      var ease = 1 - Math.pow(1 - progress, 3); /* ease-out cubic */
+      var ease = 1 - Math.pow(1 - progress, 3); 
       el.textContent = Math.round(ease * target) + suffix;
       if (progress < 1) {
         requestAnimationFrame(step);
@@ -87,19 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  /* ------------------------------------------
-     5. PAGE FADE-IN on load
-  ------------------------------------------ */
   document.body.style.opacity = '0';
   document.body.style.transition = 'opacity 0.5s ease';
   window.addEventListener('load', function () {
     document.body.style.opacity = '1';
   });
 
-  /* ------------------------------------------
-     6. SMOOTH INTERNAL LINK TRANSITIONS
-     Fades out before navigating to another page
-  ------------------------------------------ */
   var internalLinks = document.querySelectorAll('a[href]');
   internalLinks.forEach(function (link) {
     var href = link.getAttribute('href');
@@ -120,9 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* ------------------------------------------
-     6. INIT — run on page load
-  ------------------------------------------ */
   triggerCounters();
 
 });
