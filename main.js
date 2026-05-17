@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       nav.classList.remove('shrunk');
     }
-    revealOnScroll();
     triggerCounters();
   }, { passive: true });
 
@@ -50,22 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ------------------------------------------
-     3. SCROLL REVEAL
-     Elements with class "reveal" fade + slide up
-     when they enter the viewport
-  ------------------------------------------ */
-  function revealOnScroll() {
-    var elements = document.querySelectorAll('.reveal');
-    elements.forEach(function (el) {
-      var rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
-        el.classList.add('visible');
-      }
-    });
-  }
-
-  /* ------------------------------------------
-     4. NUMBER COUNTER ANIMATION
+     3. NUMBER COUNTER ANIMATION
      Finds elements with data-target attribute
      and counts up to that number on scroll
   ------------------------------------------ */
@@ -137,9 +121,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* ------------------------------------------
-     7. INIT — run on page load
+     6. INIT — run on page load
   ------------------------------------------ */
-  revealOnScroll();
   triggerCounters();
 
 });
