@@ -137,14 +137,6 @@ body {
   gap: 10px;
 }
 
-.page-tag::before {
-  content: '';
-  display: block;
-  width: 28px;
-  height: 1px;
-  background: #4AABCE;
-}
-
 .page-title {
   font-size: 38px;
   font-weight: 500;
@@ -198,14 +190,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.hero-tag::before {
-  content: '';
-  display: block;
-  width: 28px;
-  height: 1px;
-  background: #4AABCE;
 }
 
 .hero-h1 {
